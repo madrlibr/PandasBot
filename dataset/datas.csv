@@ -3,11 +3,11 @@ transaction_id,tanggal,nama_produk,kategori,harga_satuan,jumlah_beli,lokasi_toko
 2,02/01/2023,Mouse Logi,Aksesoris,250000,3,Bandung
 3,2023-01-03,Smartphone Samsung,Gadget,7000000,2,Surabaya
 3,2023-01-03,Smartphone Samsung,Gadget,7000000,2,Surabaya
-4,2023-01-04, mouse logi,Aksesoris,250000,1,Jakarta
+4,2023-01-04," mouse logi",Aksesoris,250000,1,Jakarta
 5,2023-01-05,Keyboard Mech,Aksesoris,Rp 1.200.000,1,Bandung
 6,2023-01-06,Laptop HP,Gadget,,1,Jakarta
 7,2023-01-07,Monitor LG,Elektronik,3000000,500,Medan
 8,2023-01-08,Headset King,Aksesoris,800000,nan,Bali
 9,,Smartphone Apple,Gadget,18000000,1,Jakarta
-10,2023-01-10,Laptop Asus ,Gadget,15000000,1, JKT 
-11,2023-01-40,Mouse Logi,Aksesoris,250000,2,Surabaya 
+10,2023-01-10,"Laptop Asus ",Gadget,15000000,1," JKT "
+11,2023-01-30,Mouse Logi,Aksesoris,250000,2,"Surabaya "

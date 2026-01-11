@@ -1,9 +1,8 @@
-import random
-import pandas as pd
+import random as rd
 
 def randomizer(t):
     while True:
-        return random.randint(0,t)
+        return rd.randint(0,t)
 
 def getlen(name):
     return len(name) - 1

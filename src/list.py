@@ -37,9 +37,10 @@ keyword_h = ["head", "pertama"]
 keyword_t = ["tail", "terakhir"]
 keyword_d = ['dropna', 'null']
 keyword_a = ['seluruh', 'semua']
-keyword_i = ['info']
+keyword_i = ['info', 'informasi']
 keyword_ds = ['deskripsi']
 keyword_cl = ['clean', 'bersihkan']
+keyword_f = ['formatting', 'format']
 
 
 #Listing
@@ -52,7 +53,8 @@ keyword_list = {
     "a": keyword_a,
     "i": keyword_i,
     "ds": keyword_ds,
-    "cl": keyword_cl
+    "cl": keyword_cl,
+    "f": keyword_f
 }
 
 responses_list = {

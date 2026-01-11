@@ -3,3 +3,4 @@ This is a chatbot where you can run Pandas function by message, it's using indon
 
 ## Note
 The whole project is still under development, it's not fully finish and it need refactoring and improving
+so it's not production ready.
