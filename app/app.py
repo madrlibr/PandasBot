@@ -1,25 +1,27 @@
-import sys
-import os
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-
 import streamlit as st
 import pandas as pd
-from src.function import func_list
-from src.list import responses_list, keyword_list
+import joblib
+from sklearn.feature_extraction.text import TfidfVectorizer
+
+#INIT MODEL
+loaded_model = joblib.load('model/panda.joblib')
+tfidf = TfidfVectorizer()
+model = loaded_model
+df = pd.read_csv('notebooks/dataset/sentence.csv')
+X = tfidf.fit_transform(df['text'])
 
 
 st.title("Panda Helper Chatbot 🐼")
 
 uploaded_file = st.sidebar.file_uploader("Upload file CSV", type=["csv"])
-existing_dataset = st.pills("Dataset yang tersedia", ["dataset/datas.csv"] )
-existing_dataet = existing_dataset
+existing_dataset = st.pills("Dataset yang tersedia", ["dummy/datas.csv"] )
 
 if uploaded_file or existing_dataset:
     try:
         df = pd.read_csv(uploaded_file)
         st.success("File berhasil diunggah!")
     except: 
-        df = pd.read_csv("dataset/datas.csv")
+        df = pd.read_csv("dummy/datas.csv")
         st.success("File berhasil diunggah!")
 
 
@@ -42,50 +44,53 @@ if uploaded_file or existing_dataset:
         
         response_text = ""
         output_data = None
-
-        user_input = prompt.lower()
-        user_input = user_input.split()
-
-        g_len = func_list["gl"](responses_list["g"])
-        c_len = func_list["gl"](responses_list["c"])
-
-        if any(i in user_input for i in keyword_list["i"]):
-            import io
-            buffer = io.StringIO()
-            df.info(buf=buffer)
-            response_text = responses_list["i"][0]
-            output_data = buffer.getvalue()
-
+        
+        
+        #Function
+        def dinfo(x): #this function isn't working yet
+            x = x.info()
+            return x
             
-        elif any(i in user_input for i in keyword_list["a"]):
-            response_text = {responses_list["a"][0]}
-            output_data = df
+        def ddescribe(x):
+            x = x.describe()
+            return x
+        
+        def dhead(x):
+            x = x.head(5)
+            return x
+        
+        def ddropna(x):
+            x = x.dropna()
+            return x
+        
+        def dtail(x):
+            x = x.tail(5)
+            return x
 
-        elif any(i in user_input for i in keyword_list["g"]):
-            response_text = {responses_list["g"][func_list["r"](g_len)]}
-
-        elif any(i in user_input for i in keyword_list["c"]):
-            response_text = {responses_list["c"][func_list["r"](c_len)]}
-
-        elif any(i in user_input for i in keyword_list["h"]):
-            response_text = {responses_list["h"][0]}
-            output_data = df.head()
-
-        elif any(i in user_input for i in keyword_list["t"]):
-            response_text = {responses_list["t"][0]}
-            output_data = df.tail()
-
-        elif any(i in user_input for i in keyword_list["d"]):
-            response_text = responses_list["d"][0]
-            df = df.dropna()
-            output_data = df
-
-        elif any(i in user_input for i in keyword_list["ds"]):
-            response_text = responses_list["ds"][0]
-            output_data = df.describe()
-
-        else:
-            response_text = "Pesan tidak dikenali, silahkan coba lagi!."
+        func = {
+            1: df,
+            2: ddescribe(df),
+            3: dinfo(df),
+            4: ddropna(df),
+            5: dhead(df),  
+            6: dtail(df)
+        }
+        
+        response = {
+            1: "Menampilkan seluruh baris",
+            2: "Deskripsi dataset",
+            3: "Informasi dataset",
+            4: "Menghapus baris berisi NULL/NaN",
+            5: "Memuat 5 baris pertana",
+            6: "Memuat 5 baris terakhir"
+        }
+        user_input = prompt.lower()
+        user_input = tfidf.transform([user_input])
+        predict = model.predict(user_input)
+        predict = int(predict)
+        output_data = func[predict]
+        response_text = response[predict]
+        
 
         with st.chat_message("assistant"):
             response_text = ("".join(response_text))

@@ -1,4 +1,6 @@
 import random as rd
+import pandas as pd
+
 
 def randomizer(t):
     while True:
@@ -7,13 +9,12 @@ def randomizer(t):
 def getlen(name):
     return len(name) - 1
 
-def clean_d(df):
-    df = df.dropna()
-    df = df.drop_duplicates()
-    return df
+#the function bellow can't imported yet
+def dinfo(df):
+    df.info()
 
-func_list = {
-    "r": randomizer,
-    "gl": getlen,
-    "cl": clean_d
-}
+def ddescribe(df):
+    df.describe()
+
+def dhead(df):
+    df.head(5)
