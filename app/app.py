@@ -86,7 +86,7 @@ if uploaded_file or existing_dataset:
         }
         user_input = prompt.lower()
         user_input = tfidf.transform([user_input])
-        predict = model.predict(user_input)
+        predict = model.predict(user_input)[0]
         predict = int(predict)
         output_data = func[predict]
         response_text = response[predict]
