@@ -1,6 +1,5 @@
 # PandaBot
-A Python-based application that allows users to interact with CSV datasets using natural language commands in Indonesian. The system processes user input through a rule-based engine to 
-execute specific Pandas functions and displays the results via a Streamlit web interface.
+An intelligent data assistant that translates Indonesian natural language queries into Pandas operations. This version replaces the previous keyword-matching logic with a Machine Learning model for improved intent classification.
 
 ## Requirements
     Python 3.x
