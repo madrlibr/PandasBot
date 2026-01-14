@@ -5,7 +5,7 @@ An intelligent data assistant that translates Indonesian natural language querie
     Python 3.x
     Pandas
     Streamlit
-    Sklearn
+    scikit-learn
 
 
 ## Footage
