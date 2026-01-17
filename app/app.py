@@ -2,6 +2,12 @@ import streamlit as st
 import pandas as pd
 import joblib
 from sklearn.feature_extraction.text import TfidfVectorizer
+import re
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from src.function import *
+
 
 #INIT MODEL
 loaded_model = joblib.load('model/panda.joblib')
@@ -14,14 +20,14 @@ X = tfidf.fit_transform(df['text'])
 st.title("Panda Helper Chatbot 🐼")
 
 uploaded_file = st.sidebar.file_uploader("Upload file CSV", type=["csv"])
-existing_dataset = st.pills("Dataset yang tersedia", ["dummy/datas.csv"] )
+existing_dataset = st.pills("Dataset yang tersedia", ["dummy/StudentPerformance.csv"] )
 
 if uploaded_file or existing_dataset:
     try:
         df = pd.read_csv(uploaded_file)
         st.success("File berhasil diunggah!")
     except: 
-        df = pd.read_csv("dummy/datas.csv")
+        df = pd.read_csv("dummy/StudentPerformance.csv")
         st.success("File berhasil diunggah!")
 
 
@@ -46,45 +52,38 @@ if uploaded_file or existing_dataset:
         output_data = None
         
         
-        #Function
-        def dinfo(x): #this function isn't working yet
-            x = x.info()
-            return x
-            
-        def ddescribe(x):
-            x = x.describe()
-            return x
+        user_input = prompt.lower()
+        check = isd(user_input)
+        checks = isd(user_input)
         
-        def dhead(x):
-            x = x.head(5)
-            return x
-        
-        def ddropna(x):
-            x = x.dropna()
-            return x
-        
-        def dtail(x):
-            x = x.tail(5)
-            return x
+        if check == True:
+            breaking = re.findall(r'\d+', user_input)
+            integers = "".join(breaking)
+            integers = int(integers)
+
 
         func = {
             1: df,
             2: ddescribe(df),
             3: dinfo(df),
             4: ddropna(df),
-            5: dhead(df),  
-            6: dtail(df)
+            5: dhead(df, integers),  
+            6: dtail(df, integers),
+            7: pcolumn(df, integers)
         }
-        
+
+
         response = {
             1: "Menampilkan seluruh baris",
             2: "Deskripsi dataset",
             3: "Informasi dataset",
             4: "Menghapus baris berisi NULL/NaN",
-            5: "Memuat 5 baris pertana",
-            6: "Memuat 5 baris terakhir"
+            5: f"Memuat {integers} baris awal",
+            6: f"Memuat {integers} baris terakhir",
+            7: f"Memuat kolom index {integers}"
         }
-        user_input = prompt.lower()
+
+
         user_input = tfidf.transform([user_input])
         predict = model.predict(user_input)[0]
         predict = int(predict)

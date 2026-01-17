@@ -56,8 +56,10 @@ This repository contains two versions of the chatbot:
 2. **Rule-Based Branch**: The original version using string-matching logic. You can access it by switching to the `rule-based` branch.
 
 
-## Note
-The project is still under development.
+## NOTICE
+This project use dataset with Apache 2.0 license for the dummy dataset, so it's not mine
+dataset soruce: https://www.kaggle.com/datasets/neurocipher/student-performance
+
 
 ## LICENSE
 This project is licensed under the MIT LICENSE.
