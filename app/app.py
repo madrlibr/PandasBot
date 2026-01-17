@@ -55,7 +55,8 @@ if uploaded_file or existing_dataset:
         user_input = prompt.lower()
         check = isd(user_input)
         checks = isd(user_input)
-        
+        integers = 0
+
         if check == True:
             breaking = re.findall(r'\d+', user_input)
             integers = "".join(breaking)
