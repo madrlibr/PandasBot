@@ -15,7 +15,7 @@ An intelligent data assistant that translates Indonesian natural language querie
 
 1. Clone this repository:
 ```bash
-git clone https://github.com/yourusername/pandas-chatbot.git
+git clone https://github.com/madrlibr/PandasBot.git
 
 ```
 
@@ -29,7 +29,7 @@ cd PandasBot
 
 3. Install the required dependencies:
 ```bash
-pip install pandas streamlit
+pip install -r requirements.txt
 
 ```
 
@@ -39,7 +39,7 @@ pip install pandas streamlit
 
 1. Run the Streamlit application:
 ```bash
-streamlit run app.py
+streamlit run app/app.py
 
 ```
 
@@ -57,7 +57,7 @@ This repository contains two versions of the chatbot:
 
 
 ## NOTICE
-This project use dataset with Apache 2.0 license for the dummy dataset, so it's not min e
+This project use dataset with Apache 2.0 license for the dummy dataset
 
 dataset source: https://www.kaggle.com/datasets/neurocipher/student-performance
 
