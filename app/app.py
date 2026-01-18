@@ -50,17 +50,12 @@ if uploaded_file or existing_dataset:
         
         response_text = ""
         output_data = None
-        
-        integers = 0
-        isdigit = lambda thestring: bool(re.search(r'\d', thestring))
         user_input = prompt.lower()
-        check = isdigit(user_input)
-        
-        if check == True:
-            breaking = re.findall(r'\d+', user_input)
-            integers = "".join(breaking)
-            integers = int(integers)
 
+        pro = proses(user_input=user_input, model=model, integers=0)
+        predict, integers = pro.prosesing()
+        predict = int(predict)
+        integers = int(integers)
 
         func = {
             1: df,
@@ -71,22 +66,17 @@ if uploaded_file or existing_dataset:
             6: dtail(df, integers),
             7: pcolumn(df, integers)
         }
-
-
         response = {
             1: "Menampilkan seluruh baris",
-            2: "Deskripsi dataset",
-            3: "Informasi dataset",
+            2: "Menampilkan deskripsi dataset",
+            3: "Fitur ini belum berfungsi😁!",
             4: "Menghapus baris berisi NULL/NaN",
-            5: f"Memuat {integers} baris awal",
-            6: f"Memuat {integers} baris terakhir",
-            7: f"Memuat kolom index {integers}"
+            5: f"Menampilkan {integers} baris awal",
+            6: f"Menampilkan {integers} baris terakhir",
+            7: f"Menampilkan kolom dengan index {integers}"
         }
 
 
-        user_input = tfidf.transform([user_input])
-        predict = model.predict(user_input)[0]
-        predict = int(predict)
         output_data = func[predict]
         response_text = response[predict]
         
