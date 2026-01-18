@@ -1,5 +1,5 @@
 import re
-import pandas as pd
+import joblib
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 def dinfo(x): #this function isn't working yet
@@ -50,10 +50,8 @@ class processor:
         self.integers = integers
 
     def process(self):
+        X = joblib.load("model/ftransform")
         tfidf = TfidfVectorizer()
-        df = pd.read_csv('notebooks/dataset/sentence.csv')
-        X = tfidf.fit_transform(df['text'])
-
         self.integers = 0
         isdigit = bool(re.search(r'\d', self.user_input))
         if isdigit == True:
