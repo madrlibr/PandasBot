@@ -1,8 +1,6 @@
 import streamlit as st
 import pandas as pd
 import joblib
-from sklearn.feature_extraction.text import TfidfVectorizer
-import re
 import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
@@ -10,11 +8,7 @@ from src.function import *
 
 
 #INIT MODEL
-loaded_model = joblib.load('model/panda.joblib')
-tfidf = TfidfVectorizer()
-model = loaded_model
-df = pd.read_csv('notebooks/dataset/sentence.csv')
-X = tfidf.fit_transform(df['text'])
+model = joblib.load('model/panda.joblib')
 
 
 st.title("Panda Helper Chatbot 🐼")
@@ -52,8 +46,8 @@ if uploaded_file or existing_dataset:
         output_data = None
         user_input = prompt.lower()
 
-        pro = proses(user_input=user_input, model=model, integers=0)
-        predict, integers = pro.prosesing()
+        pro = processor(user_input=user_input, model=model, integers=0)
+        predict, integers = pro.process()
         predict = int(predict)
         integers = int(integers)
 

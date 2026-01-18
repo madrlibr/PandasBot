@@ -43,13 +43,13 @@ def pcolumn(x, n):
         pass
 
 
-class proses:
+class processor:
     def __init__(self, user_input, model, integers):
         self.user_input = user_input
         self.model = model
         self.integers = integers
 
-    def prosesing(self):
+    def process(self):
         tfidf = TfidfVectorizer()
         df = pd.read_csv('notebooks/dataset/sentence.csv')
         X = tfidf.fit_transform(df['text'])
