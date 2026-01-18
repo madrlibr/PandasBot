@@ -20,9 +20,6 @@ def dtail(x, n):
     x = x.tail(n)
     return x
 
-def isd(input_string):
-  return bool(re.search(r'\d', input_string))
-
 class makeice:
     def __init__(self, data):
         self.data = data

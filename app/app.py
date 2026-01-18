@@ -51,12 +51,11 @@ if uploaded_file or existing_dataset:
         response_text = ""
         output_data = None
         
-        
-        user_input = prompt.lower()
-        check = isd(user_input)
-        checks = isd(user_input)
         integers = 0
-
+        isdigit = lambda thestring: bool(re.search(r'\d', thestring))
+        user_input = prompt.lower()
+        check = isdigit(user_input)
+        
         if check == True:
             breaking = re.findall(r'\d+', user_input)
             integers = "".join(breaking)
@@ -91,15 +90,14 @@ if uploaded_file or existing_dataset:
         output_data = func[predict]
         response_text = response[predict]
         
-
-        with st.chat_message("assistant"):
-            response_text = ("".join(response_text))
-            st.write(response_text)
-            if output_data is not None:
-                try:
+        try:
+            with st.chat_message("assistant"):
+                response_text = ("".join(response_text))
+                st.write(response_text)
+                if output_data is not None:
                     st.dataframe(output_data)
-                except:
-                    st.write(output_data)
+        except:
+            st.write("Terjadi kesalahan!")
 
         st.session_state.messages.append({
             "role": "assistant", 
