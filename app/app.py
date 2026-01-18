@@ -3,22 +3,12 @@ import pandas as pd
 import joblib
 import sys
 import os
-
-current_dir = os.path.dirname(os.path.abspath(__file__)) 
-root_dir = os.path.abspath(os.path.join(current_dir, '..')) 
-if root_dir not in sys.path:
-    sys.path.append(root_dir)
-
-try:
-    from src.function import processor, ddescribe, dinfo, ddropna, dhead, dtail, pcolumn
-except ImportError as e:
-    st.error(f"Gagal mengimport fungsi: {e}")
-    from src.function import *
-
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from myclass import processor
+from src.function import *
 
 #INIT MODEL
 model = joblib.load('model/panda.joblib')
-
 
 st.title("Panda Helper Chatbot 🐼")
 
