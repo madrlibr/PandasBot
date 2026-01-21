@@ -1,5 +1,3 @@
-import numpy as np
-
 def finfo(x): #this function isn't working yet
     x = x.info()
     return x
@@ -41,8 +39,8 @@ def select_column(x, n):
         pass
 
 def meancolumn(data, integers):
+    column = select_column(data, integers)
     try:
-        column = select_column(data, integers)
         mean = round((column).mean(), 2)
         return mean
     except:
@@ -50,8 +48,8 @@ def meancolumn(data, integers):
         return message
 
 def mediancolumn(data, integers):
+    column = select_column(data, integers)
     try:
-        column = select_column(data, integers)
         median = round((column).median(), 2)
         return median
     except:
@@ -59,10 +57,10 @@ def mediancolumn(data, integers):
         return message
 
 def sumcolumn(data, integers):
-    try:
-        column = select_column(data, integers)
+    column = select_column(data, integers)
+    if column.dtype.kind in 'ifu':
         summ = column.sum()
         return summ
-    except:
+    else:
         message = "Kesalahan, tidak dapat melakukan operasi, pastikan tipe data kolom adalah integer atau float"
         return message
