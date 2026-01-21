@@ -5,7 +5,7 @@ An intelligent data assistant that translates Indonesian natural language querie
     Python 3.x
     Pandas
     Streamlit
-    scikit-learn
+    Scikit-learn
 
 
 ## Footage
@@ -15,21 +15,21 @@ An intelligent data assistant that translates Indonesian natural language querie
 
 1. Clone this repository:
 ```bash
-git clone https://github.com/yourusername/pandas-chatbot.git
+git clone https://github.com/madrlibr/PandasBot.git
 
 ```
 
 
 2. Navigate to the project directory:
 ```bash
-cd panda-chatbot
+cd PandasBot
 
 ```
 
 
 3. Install the required dependencies:
 ```bash
-pip install pandas streamlit
+pip install -r requirements.txt
 
 ```
 
@@ -39,14 +39,14 @@ pip install pandas streamlit
 
 1. Run the Streamlit application:
 ```bash
-streamlit run app.py
+streamlit run app/app.py
 
 ```
 
 2. Upload your CSV file through the sidebar or use the dummy dataset i provided.
 3. Type commands in the chat input using Indonesian, such as:
 * "tampilkan seluruh data" (show all data)
-* "berikan info dataset" (get dataset info)
+* "Hapus baris dengan nilai NaN" (delete row with NaN value)
 * "deskripsi data" (get statistical description)
 
 
@@ -57,8 +57,9 @@ This repository contains two versions of the chatbot:
 
 
 ## NOTICE
-This project use dataset with Apache 2.0 license for the dummy dataset, so it's not mine
-dataset soruce: https://www.kaggle.com/datasets/neurocipher/student-performance
+This project use dataset with Apache 2.0 license for the dummy dataset
+
+dataset source: https://www.kaggle.com/datasets/neurocipher/student-performance
 
 
 ## LICENSE
