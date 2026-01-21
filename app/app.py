@@ -4,13 +4,13 @@ import joblib
 import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from myclass import processor
 from src.function import *
+from classes import processor
 
-#INIT MODEL
+#LOAD MODEL
 model = joblib.load('model/panda.joblib')
 
-st.title("Panda Helper Chatbot 🐼")
+st.title("Panda Chatbot")
 
 uploaded_file = st.sidebar.file_uploader("Upload file CSV", type=["csv"])
 existing_dataset = st.pills("Dataset yang tersedia", ["dummy/StudentPerformance.csv"] )
@@ -44,20 +44,23 @@ if uploaded_file or existing_dataset:
         response_text = ""
         output_data = None
         user_input = prompt.lower()
-
         pro = processor(user_input=user_input, model=model, integers=0)
         predict, integers = pro.process()
         predict = int(predict)
         integers = int(integers)
 
+
         func = {
             1: df,
-            2: ddescribe(df),
-            3: dinfo(df),
-            4: ddropna(df),
-            5: dhead(df, integers),  
-            6: dtail(df, integers),
-            7: pcolumn(df, integers)
+            2: fdescribe(df),
+            3: finfo(df),
+            4: fdropna(df),
+            5: fhead(df, integers),  
+            6: ftail(df, integers),
+            7: select_column(df, integers),
+            8: meancolumn(df, integers),
+            9: mediancolumn(df, integers),
+            10: sumcolumn(df, integers)
         }
         response = {
             1: "Menampilkan seluruh baris",
@@ -66,7 +69,10 @@ if uploaded_file or existing_dataset:
             4: "Menghapus baris berisi NULL/NaN",
             5: f"Menampilkan {integers} baris awal",
             6: f"Menampilkan {integers} baris terakhir",
-            7: f"Menampilkan kolom dengan index {integers}"
+            7: f"Menampilkan kolom dengan index {integers}",
+            8: f"Nilai rata-rata/mean dari kolom index ke-{integers} adalah: ",
+            9: f"Nilai tengah/median kolom index ke-{integers} adalah: ",
+            10: f"Total-nilai/sum dari kolom index ke-{integers} adalah: "
         }
 
 
@@ -78,7 +84,10 @@ if uploaded_file or existing_dataset:
                 response_text = ("".join(response_text))
                 st.write(response_text)
                 if output_data is not None:
-                    st.dataframe(output_data)
+                    try:
+                        st.dataframe(output_data)
+                    except:
+                        st.write(output_data)
         except:
             st.write("Terjadi kesalahan!")
 

@@ -3,3 +3,4 @@ testing/
 .ipynb_checkpoints/
 report.txt
 exp.ipynb
+ftransform.joblib
