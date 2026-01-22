@@ -44,10 +44,10 @@ if uploaded_file or existing_dataset:
         response_text = ""
         output_data = None
         user_input = prompt.lower()
-        pro = processor(user_input=user_input, model=model, integers=0)
-        predict, integers = pro.process()
+        pro = processor(user_input=user_input, model=model, number=0)
+        predict, number = pro.process()
         predict = int(predict)
-        integers = int(integers)
+        number = int(number)
 
 
         func = {
@@ -55,24 +55,28 @@ if uploaded_file or existing_dataset:
             2: fdescribe(df),
             3: finfo(df),
             4: fdropna(df),
-            5: fhead(df, integers),  
-            6: ftail(df, integers),
-            7: select_column(df, integers),
-            8: meancolumn(df, integers),
-            9: mediancolumn(df, integers),
-            10: sumcolumn(df, integers)
+            5: fhead(df, number),  
+            6: ftail(df, number),
+            7: select_column(df, number),
+            8: meancolumn(df, number),
+            9: mediancolumn(df, number),
+            10: sumcolumn(df, number),
+            11: check_dtype(df, number),
+            12: change_type(user_input, number, df)
         }
         response = {
             1: "Menampilkan seluruh baris",
             2: "Menampilkan deskripsi dataset",
-            3: "Fitur ini belum berfungsi😁!",
+            3: "Tipe data kolom adalah: ",
             4: "Menghapus baris berisi NULL/NaN",
-            5: f"Menampilkan {integers} baris awal",
-            6: f"Menampilkan {integers} baris terakhir",
-            7: f"Menampilkan kolom dengan index {integers}",
-            8: f"Nilai rata-rata/mean dari kolom index ke-{integers} adalah: ",
-            9: f"Nilai tengah/median kolom index ke-{integers} adalah: ",
-            10: f"Total-nilai/sum dari kolom index ke-{integers} adalah: "
+            5: f"Menampilkan {number} baris awal",
+            6: f"Menampilkan {number} baris terakhir",
+            7: f"Menampilkan kolom dengan index {number}",
+            8: f"Nilai rata-rata/mean dari kolom index ke-{number} adalah: ",
+            9: f"Nilai tengah/median kolom index ke-{number} adalah: ",
+            10: f"Total-nilai/sum dari kolom index ke-{number} adalah: ",
+            11: f"Tipe data dari kolom dengan index ke-{number} adalah: ",
+            12: f""
         }
 
 

@@ -999,3 +999,203 @@ tampilkan sum kolom ke 1,10
 tampilkan sum kolom ke 2,10
 tampilkan sum kolom ke 3,10
 tampilkan sum kolom ke 4,10
+cek tipe data kolom dengan index ke 0,11
+apa tipe data kolom index 1,11
+tampilkan jenis data kolom ke 2,11
+lihat format data kolom index 0,11
+cek dtypes kolom index 3,11
+tampilkan tipe data untuk kolom index 0,11
+apa format kolom index 1,11
+cek tipe data pada kolom index 0,11
+berikan jenis data dari kolom 2,11
+apa tipe data kolom index 4,11
+jenis data kolom 0 apa,11
+tampilkan tipe data dari index kolom 0,11
+ceklah tipe data kolom ke 0,11
+output tipe data untuk kolom index 1,11
+cari tahu tipe data kolom 0,11
+tampilkan jenis variabel index 0,11
+apa tipe data untuk index 0,11
+cek format data pada kolom 0,11
+tipe data kolom index 0,11
+tampilkan tipe kolom dari kolom 1,11
+apa jenis data kolom 0,11
+tampilkan dtypes kolom index 5,11
+cek tipe data kolom index 6,11
+cek jenis data kolom 7,11
+apa tipe data kolom 8,11
+cari tipe data kolom index 9,11
+tampilkan dtypes kolom index 10,11
+berapa jenis data kolom 0,11
+cek tipe data kolom 0 saja,11
+tampilkan tipe data kolom ke-0,11
+jenis data kolom index 0 adalah,11
+tampilkan format dari kolom nomor 0,11
+apa tipe data kolom nomor 1,11
+tampilkan tipe data kolom urutan 0,11
+cek jenis data kolom urutan 1,11
+berikan dtypes untuk kolom index 0,11
+tampilkan tipe data kolom index 11,11
+tampilkan tipe data kolom index 12,11
+tampilkan tipe data kolom index 13,11
+tampilkan tipe data kolom index 14,11
+tampilkan tipe data kolom index 15,11
+tampilkan tipe data kolom index 16,11
+tampilkan tipe data kolom index 17,11
+tampilkan tipe data kolom index 18,11
+tampilkan tipe data kolom index 19,11
+tampilkan tipe data kolom index 20,11
+cek tipe data kolom 0,11
+cek tipe data kolom 1,11
+cek tipe data kolom 2,11
+cek tipe data kolom 3,11
+cek tipe data kolom 4,11
+cek tipe data kolom 5,11
+apa tipe data kolom index 0,11
+tampilkan jenis data kolom 1,11
+cari format data kolom index 2,11
+cek tipe data untuk kolom 0,11
+apa nilai tipe data kolom 3,11
+tampilkan dtypes kolom 0,11
+tampilkan dtypes kolom 1,11
+tampilkan dtypes kolom 2,11
+tampilkan dtypes kolom 3,11
+tampilkan dtypes kolom 4,11
+tampilkan dtypes kolom 5,11
+tampilkan dtypes kolom 6,11
+tampilkan dtypes kolom 7,11
+tampilkan dtypes kolom 8,11
+tampilkan dtypes kolom 9,11
+tampilkan dtypes kolom 10,11
+apa jenis data dari kolom index 0,11
+apa jenis data dari kolom index 1,11
+apa jenis data dari kolom index 2,11
+apa jenis data dari kolom index 3,11
+apa jenis data dari kolom index 4,11
+apa jenis data dari kolom index 5,11
+berikan info tipe data kolom 0,11
+berikan info tipe data kolom 1,11
+berikan info tipe data kolom 2,11
+berikan info tipe data kolom 3,11
+tampilkan tipe data dari kolom index 0,11
+tampilkan tipe data dari kolom index 1,11
+tampilkan tipe data dari kolom index 2,11
+tampilkan tipe data dari kolom index 3,11
+tampilkan tipe data dari kolom index 4,11
+tampilkan tipe data dari kolom index 5,11
+tampilkan tipe data dari kolom index 6,11
+tampilkan tipe data dari kolom index 7,11
+tampilkan tipe data dari kolom index 8,11
+tampilkan tipe data dari kolom index 9,11
+tampilkan tipe data dari kolom index 10,11
+cek jenis data dataset pada kolom 0,11
+cek jenis data dataset pada kolom 1,11
+cek jenis data dataset pada kolom 2,11
+cek jenis data dataset pada kolom 3,11
+cek jenis data dataset pada kolom 4,11
+cek jenis data dataset pada kolom 5,11
+tampilkan jenis data kolom ke 0,11
+tampilkan jenis data kolom ke 1,11
+tampilkan jenis data kolom ke 2,11
+tampilkan jenis data kolom ke 3,11
+tampilkan jenis data kolom ke 4,11
+ubah tipe data kolom index ke 1 menjadi float,12
+ganti jenis data kolom 0 jadi integer,12
+konversi kolom index 2 ke string,12
+ubah format kolom index 0 jadi float,12
+tolong ubah kolom 1 jadi int,12
+jadikan kolom index 3 sebagai string,12
+ubah tipe data kolom ke 0 jadi float,12
+ganti tipe kolom index 1 ke integer,12
+set kolom 2 menjadi tipe string,12
+ubah kolom index 4 jadi float,12
+konversi jenis data kolom 0 ke int,12
+ubah tipe data index kolom 0 ke float,12
+ganti kolom ke 0 menjadi string,12
+ubah format data kolom index 1 jadi integer,12
+tolong jadikan kolom 0 tipe float,12
+ubah variabel index 0 ke string,12
+konversi index 0 jadi float,12
+ganti tipe data pada kolom 0 ke integer,12
+ubah tipe data kolom index 0 ke str,12
+set tipe data kolom 1 jadi float,12
+ubah jenis data kolom 0 ke integer,12
+konversi dtypes kolom index 5 ke string,12
+ubah tipe data kolom index 6 jadi float,12
+ganti jenis data kolom 7 jadi int,12
+ubah format data kolom 8 ke string,12
+konversi tipe data kolom index 9 jadi float,12
+ubah dtypes kolom index 10 ke integer,12
+ganti tipe data kolom 0 ke float,12
+ubah tipe data kolom 0 saja jadi string,12
+ubah kolom ke-0 jadi integer,12
+set kolom index 0 jadi float,12
+ubah format dari kolom nomor 0 ke string,12
+ganti tipe data kolom nomor 1 jadi integer,12
+ubah tipe data kolom urutan 0 ke float,12
+konversi jenis data kolom urutan 1 jadi string,12
+ubah dtypes untuk kolom index 0 ke integer,12
+ubah tipe data kolom index 11 jadi float,12
+ubah tipe data kolom index 12 jadi string,12
+ubah tipe data kolom index 13 jadi integer,12
+ubah tipe data kolom index 14 jadi float,12
+ubah tipe data kolom index 15 jadi string,12
+ubah tipe data kolom index 16 jadi integer,12
+ubah tipe data kolom index 17 jadi float,12
+ubah tipe data kolom index 18 jadi string,12
+ubah tipe data kolom index 19 jadi integer,12
+ubah tipe data kolom index 20 jadi float,12
+ganti tipe kolom 0 jadi string,12
+ganti tipe kolom 1 jadi integer,12
+ganti tipe kolom 2 jadi float,12
+ganti tipe kolom 3 jadi string,12
+ganti tipe kolom 4 jadi integer,12
+ganti tipe kolom 5 jadi float,12
+konversi kolom index 0 ke float,12
+ubah jenis data kolom 1 jadi string,12
+ganti format data kolom index 2 ke integer,12
+ubah tipe data untuk kolom 0 jadi float,12
+ubah nilai tipe data kolom 3 ke string,12
+set dtypes kolom 0 jadi integer,12
+set dtypes kolom 1 jadi float,12
+set dtypes kolom 2 jadi string,12
+set dtypes kolom 3 jadi integer,12
+set dtypes kolom 4 jadi float,12
+set dtypes kolom 5 jadi string,12
+set dtypes kolom 6 jadi integer,12
+set dtypes kolom 7 jadi float,12
+set dtypes kolom 8 jadi string,12
+set dtypes kolom 9 jadi integer,12
+set dtypes kolom 10 jadi float,12
+ubah jenis data dari kolom index 0 ke string,12
+ubah jenis data dari kolom index 1 ke integer,12
+ubah jenis data dari kolom index 2 ke float,12
+ubah jenis data dari kolom index 3 ke string,12
+ubah jenis data dari kolom index 4 ke integer,12
+ubah jenis data dari kolom index 5 ke float,12
+ganti tipe data kolom 0 menjadi float,12
+ganti tipe data kolom 1 menjadi string,12
+ganti tipe data kolom 2 menjadi integer,12
+ganti tipe data kolom 3 menjadi float,12
+ubah tipe data dari kolom index 0 jadi string,12
+ubah tipe data dari kolom index 1 jadi integer,12
+ubah tipe data dari kolom index 2 jadi float,12
+ubah tipe data dari kolom index 3 jadi string,12
+ubah tipe data dari kolom index 4 jadi integer,12
+ubah tipe data dari kolom index 5 jadi float,12
+ubah tipe data dari kolom index 6 jadi string,12
+ubah tipe data dari kolom index 7 jadi integer,12
+ubah tipe data dari kolom index 8 jadi float,12
+ubah tipe data dari kolom index 9 jadi string,12
+ubah tipe data dari kolom index 10 jadi integer,12
+konversi dataset pada kolom 0 ke float,12
+konversi dataset pada kolom 1 ke string,12
+konversi dataset pada kolom 2 ke integer,12
+konversi dataset pada kolom 3 ke float,12
+konversi dataset pada kolom 4 ke string,12
+konversi dataset pada kolom 5 ke integer,12
+ubah jenis data kolom ke 0 jadi float,12
+ubah jenis data kolom ke 1 jadi string,12
+ubah jenis data kolom ke 2 jadi integer,12
+ubah jenis data kolom ke 3 jadi float,12
+ubah jenis data kolom ke 4 jadi string,12

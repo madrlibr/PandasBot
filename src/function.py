@@ -1,22 +1,22 @@
-def finfo(x): #this function isn't working yet
-    x = x.info()
-    return x
+def finfo(data): #this function can't work yet
+    data = data.info()
+    return data
             
-def fdescribe(x):
-    x = x.describe()
-    return x
+def fdescribe(data):
+    data = data.describe()
+    return data
         
-def fhead(x, n):
-    x = x.head(n)
-    return x
+def fhead(data, n):
+    data = data.head(n)
+    return data
         
-def fdropna(x):
-    x = x.dropna()
-    return x
+def fdropna(data):
+    data = data.dropna()
+    return data
         
-def ftail(x, n):
-    x = x.tail(n)
-    return x
+def ftail(data, n):
+    data = data.tail(n)
+    return data
 
 class makeice:
     def __init__(self, data):
@@ -30,8 +30,8 @@ class makeice:
             self.container[key] = self.data.iloc[:, i]
 
 
-def select_column(x, n):
-    obj = makeice(x)
+def select_column(data, n):
+    obj = makeice(data)
     obj.breakice()
     try:
         return obj.container[n]
@@ -64,3 +64,39 @@ def sumcolumn(data, integers):
     else:
         message = "Kesalahan, tidak dapat melakukan operasi, pastikan tipe data kolom adalah integer atau float"
         return message
+    
+def check_dtype(data, n):
+    column = select_column(data, n)
+    dtype = (column.dtype)
+    return dtype
+
+def changer(type:str, input, n, data):
+    input = input.split()
+    column = data.iloc[:, n]
+    getdtypef = (column.dtype)
+    if type in input:
+        try:
+            data.iloc[:, n] = data.iloc[:, n].astype(type)
+            columnS = data.iloc[:, n] 
+            getdtype = (columnS.dtype)
+            m = f"Mengubah tipe data kolom index ke-{n}, dari {getdtypef} ke {getdtype} "
+            return m
+        except:
+            m = "Terjadi kesalahan!"
+            return m
+    #There's still a problem, and that is i can't yet change the dtype permanently, so i'm still working on it
+    #and maybe i do overengineering, because when i think again, makeice class is not necessary and there's must be a simple way to pick a column
+
+def change_type(user_input, n, data):
+    integers = "int"
+    floats = "float"
+    strings = "string"
+    if integers in user_input:
+        change = changer(integers, user_input, n, data)
+        return change
+    if floats in user_input:
+        change = changer(floats, user_input, n, data)
+        return change
+    if strings in user_input:
+        change = changer(strings, user_input, n, data)
+        return change
