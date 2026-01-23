@@ -10,20 +10,37 @@ from classes import processor
 #LOAD MODEL
 model = joblib.load('model/panda.joblib')
 
+if "df_data" not in st.session_state:
+    st.session_state.df_data = None
+
 st.title("Panda Chatbot")
 
 uploaded_file = st.sidebar.file_uploader("Upload file CSV", type=["csv"])
 existing_dataset = st.pills("Dataset yang tersedia", ["dummy/StudentPerformance.csv"] )
 
-if uploaded_file or existing_dataset:
-    try:
-        df = pd.read_csv(uploaded_file)
-        st.success("File berhasil diunggah!")
-    except: 
-        df = pd.read_csv("dummy/StudentPerformance.csv")
-        st.success("File berhasil diunggah!")
+if uploaded_file or existing_dataset:   
+    if st.session_state.df_data is None:
+        try:
+            if uploaded_file:
+                st.session_state.df_data = pd.read_csv(uploaded_file)
+            else:
+                st.session_state.df_data = pd.read_csv("dummy/StudentPerformance.csv")
+            st.success("File berhasil dibaca!")
+        except Exception as e: 
+            st.error(f"Gagal membaca file: {e}")
 
+    df = st.session_state.df_data
 
+    if st.session_state.df_data is not None:
+        st.sidebar.markdown("---")
+        csv_string = df.to_csv(index=False)
+        csv_bytes = csv_string.encode('utf-8')
+        st.sidebar.download_button(
+            label="Save hasil",
+            data=csv_bytes,
+            file_name='dataset_baru.csv',
+            mime='text/csv'
+        )
     if "messages" not in st.session_state:
         st.session_state.messages = []
 
@@ -67,7 +84,7 @@ if uploaded_file or existing_dataset:
         response = {
             1: "Menampilkan seluruh baris",
             2: "Menampilkan deskripsi dataset",
-            3: "Fitur ini belum berfungsi😊",
+            3: "Informasi Dataset: ",
             4: "Menghapus baris berisi NULL/NaN",
             5: f"Menampilkan {number} baris awal",
             6: f"Menampilkan {number} baris terakhir",

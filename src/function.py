@@ -1,6 +1,9 @@
-def finfo(data): #this function can't work yet
-    data = data.info()
-    return data
+import io
+
+def finfo(data):
+    buffer = io.StringIO()
+    data.info(buf=buffer)
+    return buffer.getvalue()
             
 def fdescribe(data):
     data = data.describe()
@@ -11,7 +14,7 @@ def fhead(data, n):
     return data
         
 def fdropna(data):
-    data = data.dropna()
+    data = data.dropna(inplace=True)
     return data
         
 def ftail(data, n):
@@ -65,11 +68,11 @@ def check_dtype(data, n):
         m = f"Kesalahan! tidak ada kolom dengan index ke-{n}"
         return m
     
-def changer(type:str, input, n, data):
+def changer(type, input, n, data):
     input = input.split()
     column = data.iloc[:, n]
     getdtypef = (column.dtype)
-    if type in input:
+    if type in input:   
         try:
             data.iloc[:, n] = data.iloc[:, n].astype(type)
             columnS = data.iloc[:, n] 
@@ -81,11 +84,11 @@ def changer(type:str, input, n, data):
             return m
 
 def change_type(user_input, n, data):
-    n = "int"
+    integers = "int"
     floats = "float"
     strings = "string"
-    if n in user_input:
-        change = changer(n, user_input, n, data)
+    if integers in user_input:
+        change = changer(integers, user_input, n, data)
         return change
     if floats in user_input:
         change = changer(floats, user_input, n, data)
