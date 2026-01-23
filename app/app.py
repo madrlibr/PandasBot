@@ -58,16 +58,16 @@ if uploaded_file or existing_dataset:
             5: fhead(df, number),  
             6: ftail(df, number),
             7: select_column(df, number),
-            8: meancolumn(df, number),
-            9: mediancolumn(df, number),
-            10: sumcolumn(df, number),
+            8: mean_column(df, number),
+            9: median_column(df, number),
+            10: sum_column(df, number),
             11: check_dtype(df, number),
             12: change_type(user_input, number, df)
         }
         response = {
             1: "Menampilkan seluruh baris",
             2: "Menampilkan deskripsi dataset",
-            3: "Tipe data kolom adalah: ",
+            3: "Fitur ini belum berfungsi😊",
             4: "Menghapus baris berisi NULL/NaN",
             5: f"Menampilkan {number} baris awal",
             6: f"Menampilkan {number} baris terakhir",

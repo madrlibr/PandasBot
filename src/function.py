@@ -18,58 +18,53 @@ def ftail(data, n):
     data = data.tail(n)
     return data
 
-class makeice:
-    def __init__(self, data):
-        self.data = data
-        self.length = len(data.columns)
-        self.container = {}
-
-    def breakice(self):
-        for i in range(0, self.length):
-            key = int(i)
-            self.container[key] = self.data.iloc[:, i]
-
-
 def select_column(data, n):
-    obj = makeice(data)
-    obj.breakice()
     try:
-        return obj.container[n]
+        column = data.iloc[:, n]
+        return column
     except:
         pass
 
-def meancolumn(data, integers):
-    column = select_column(data, integers)
+def mean_column(data, n):
+    column = select_column(data, n)
     try:
         mean = round((column).mean(), 2)
         return mean
     except:
-        message = "Kesalahan, tidak dapat melakukan operasi, pastikan tipe data kolom adalah integer atau float"
+        message = "Kesalahan! tidak dapat melakukan operasi, pastikan kolom ada dan tipe data kolom adalah integer atau float"
         return message
 
-def mediancolumn(data, integers):
-    column = select_column(data, integers)
+def median_column(data, n):
+    column = select_column(data, n)
     try:
         median = round((column).median(), 2)
         return median
     except:
-        message = "Kesalahan, tidak dapat melakukan operasi, pastikan tipe data kolom adalah integer atau float"
+        message = "Kesalahan! tidak dapat melakukan operasi, pastikan kolom ada dan tipe data kolom adalah integer atau float"
         return message
 
-def sumcolumn(data, integers):
-    column = select_column(data, integers)
-    if column.dtype.kind in 'ifu':
-        summ = column.sum()
-        return summ
-    else:
-        message = "Kesalahan, tidak dapat melakukan operasi, pastikan tipe data kolom adalah integer atau float"
+def sum_column(data, n):
+    column = select_column(data, n)
+    try:
+        if column.dtype.kind in 'ifu':
+            summ = column.sum()
+            return summ
+        else:
+            message = "Kesalahan! tidak dapat melakukan operasi, pastikan kolom ada dan tipe data kolom adalah integer atau float"
+            return message
+    except:
+        message = "Kesalahan! tidak dapat melakukan operasi, pastikan kolom ada dan tipe data kolom adalah integer atau float"
         return message
     
 def check_dtype(data, n):
-    column = select_column(data, n)
-    dtype = (column.dtype)
-    return dtype
-
+    try:
+        column = select_column(data, n)
+        dtype = (column.dtype)
+        return dtype
+    except:
+        m = f"Kesalahan! tidak ada kolom dengan index ke-{n}"
+        return m
+    
 def changer(type:str, input, n, data):
     input = input.split()
     column = data.iloc[:, n]
@@ -84,15 +79,13 @@ def changer(type:str, input, n, data):
         except:
             m = "Terjadi kesalahan!"
             return m
-    #There's still a problem, and that is i can't yet change the dtype permanently, so i'm still working on it
-    #and maybe i do overengineering, because when i think again, makeice class is not necessary and there's must be a simple way to pick a column
 
 def change_type(user_input, n, data):
-    integers = "int"
+    n = "int"
     floats = "float"
     strings = "string"
-    if integers in user_input:
-        change = changer(integers, user_input, n, data)
+    if n in user_input:
+        change = changer(n, user_input, n, data)
         return change
     if floats in user_input:
         change = changer(floats, user_input, n, data)
