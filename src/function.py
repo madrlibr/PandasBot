@@ -14,15 +14,21 @@ def fhead(data, n):
     return data
         
 def fdropna(data):
-    return data.dropna(inplace=True)
-
+    try:
+        return data.dropna()
+    except:
+        return "Error!"
+    
 def ftail(data, n):
     data = data.tail(n)
     return data
 
 def delete_row(data, n):
-    return data.drop(n)
-
+    try:
+        return data.drop(n)
+    except:
+        return "Error!"
+    
 def select_column(data, n):
     try:
         return data.iloc[:, n]
@@ -90,12 +96,13 @@ def change_type(user_input, n, data):
         "float": "float",
         "string": "string"
      }
-    
-    for key, val in targets.items():
-        if key in user_input:
-            return changer(val, user_input, n, data)
-    
-    return "Tipe data tidak dikenali dalam input."
+    try:
+        for key, val in targets.items():
+            if key in user_input:
+                return changer(val, user_input, n, data)
+
+    except:
+        return f"Terjadi kesalahan!"
         
 
 def fill(data, n, user_input):

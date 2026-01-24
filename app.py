@@ -11,7 +11,7 @@ model = joblib.load('model/panda.joblib')
 if "df_data" not in st.session_state:
     st.session_state.df_data = None
 
-st.title("Panda Chatbot")
+st.title("Pandas AI")
 st.caption("Manage and manipulate your dataset in narutal language (indonesian only)")
 
 uploaded_file = st.sidebar.file_uploader("Upload file CSV", type=["csv"])
@@ -56,7 +56,7 @@ if uploaded_file or existing_dataset:
         with st.chat_message("user"):
             st.markdown(prompt)
 
-        number = 1
+
         response_text = ""
         output_data = None
         user_input = prompt.lower()
