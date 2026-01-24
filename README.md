@@ -1,4 +1,4 @@
-# PandaBot
+# PandasAI
 An intelligent data assistant that translates Indonesian natural language queries into Pandas operations. This version replaces the previous keyword-matching logic with a Machine Learning model for improved intent classification.
 
 ## Requirements
