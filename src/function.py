@@ -14,17 +14,18 @@ def fhead(data, n):
     return data
         
 def fdropna(data):
-    data = data.dropna(inplace=True)
-    return data
-        
+    return data.dropna(inplace=True)
+
 def ftail(data, n):
     data = data.tail(n)
     return data
 
+def delete_row(data, n):
+    return data.drop(n)
+
 def select_column(data, n):
     try:
-        column = data.iloc[:, n]
-        return column
+        return data.iloc[:, n]
     except:
         pass
 
@@ -61,38 +62,60 @@ def sum_column(data, n):
     
 def check_dtype(data, n):
     try:
+        column_name = data.columns[n]
+        name = column_name
         column = select_column(data, n)
         dtype = (column.dtype)
-        return dtype
+        return f"Tipe data kolom '{name}' (index {n}) adalah {dtype}"
     except:
         m = f"Kesalahan! tidak ada kolom dengan index ke-{n}"
         return m
     
 def changer(type, input, n, data):
     input = input.split()
-    column = data.iloc[:, n]
-    getdtypef = (column.dtype)
+    n = int(n)
+    column_name = data.columns[n]
+    getdtypef =  data.iloc[:, n].dtype
     if type in input:   
         try:
-            data.iloc[:, n] = data.iloc[:, n].astype(type)
-            columnS = data.iloc[:, n] 
-            getdtype = (columnS.dtype)
-            m = f"Mengubah tipe data kolom index ke-{n}, dari {getdtypef} ke {getdtype} "
-            return m
-        except:
-            m = "Terjadi kesalahan!"
-            return m
+            data[column_name] = data[column_name].astype(type)
+            getdtypen = data[column_name].dtype
+            return f"Mengubah kolom '{column_name}' (index {n}), dari {getdtypef} ke {getdtypen}"
+        except Exception as e:
+            return f"Terjadi kesalahan: {e}"
 
 def change_type(user_input, n, data):
-    integers = "int"
-    floats = "float"
-    strings = "string"
-    if integers in user_input:
-        change = changer(integers, user_input, n, data)
-        return change
-    if floats in user_input:
-        change = changer(floats, user_input, n, data)
-        return change
-    if strings in user_input:
-        change = changer(strings, user_input, n, data)
-        return change
+    targets = {
+        "int": "int",
+        "float": "float",
+        "string": "string"
+     }
+    
+    for key, val in targets.items():
+        if key in user_input:
+            return changer(val, user_input, n, data)
+    
+    return "Tipe data tidak dikenali dalam input."
+        
+
+def fill(data, n, user_input):
+    method_list = {
+        "mean": "mean",
+        "median": "median"
+    }
+
+    try:
+        column_name = data.columns[n]
+        column = select_column(data, n)
+        user_input = user_input.split()
+
+        for key, val in method_list.items():
+                if key in user_input:
+                    try:
+                        fill_value = getattr(column, val)()
+                        data[column_name] = data[column_name].fillna(fill_value)
+                        return data[column_name]
+                    except Exception as e:
+                        return f"Error: {e}"
+    except:
+        pass

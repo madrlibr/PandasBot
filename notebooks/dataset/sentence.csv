@@ -1199,3 +1199,203 @@ ubah jenis data kolom ke 1 jadi string,12
 ubah jenis data kolom ke 2 jadi integer,12
 ubah jenis data kolom ke 3 jadi float,12
 ubah jenis data kolom ke 4 jadi string,12
+isi data kosong di kolom index 0 dengan mean,13
+isi baris nan pada kolom 1 pakai median,13
+input nilai kosong kolom index 2 dengan rata-rata,13
+tutup nilai null kolom 0 menggunakan nilai tengah,13
+isi kolom index 3 yang kosong dengan mean,13
+gunakan mean untuk mengisi nan di kolom 0,113
+pakai median buat isi data kosong kolom index 1,13
+isi nilai yang hilang di kolom 2 dengan rata-rata,13
+handle missing value kolom index 0 pakai median,13
+isi nan kolom 4 dengan mean,13
+rata-rata kolom 0 buat isi yang kosong,13
+masukkan mean ke kolom index 0 yang null,13
+isilah kolom ke 0 yang kosong dengan median,13
+isi missing data kolom index 1 pakai rata-rata,13
+isi data bolong kolom 0 dengan nilai tengah,13
+pakai mean untuk isi kolom index 0 yang kosong,13
+isi nan untuk index 0 dengan median,13
+isi data yang hilang pada kolom 0 pakai rata-rata,13
+isi nilai kosong kolom index 0 dengan mean,13
+isi nan dari kolom 1 pakai nilai tengah,13
+pakai rata-rata untuk isi kolom 0 yang kosong,13
+isi data kosong kolom index 5 dengan mean,13
+isi baris nan kolom index 6 pakai median,13
+isi nilai null kolom 7 dengan rata-rata,13
+isi nilai kosong kolom 8 dengan nilai tengah,13
+isi nan kolom index 9 pakai mean,13
+isi nan kolom index 10 pakai median,13
+masukkan rata-rata ke kolom 0 yang kosong,13
+isi data kosong kolom 0 saja pakai mean,13
+isi kolom ke-0 yang null dengan median,13
+isi baris kosong kolom index 0 dengan rata-rata,13
+isi nan dari kolom nomor 0 pakai nilai tengah,13
+isi nilai kosong kolom nomor 1 pakai mean,13
+isi data kosong kolom urutan 0 dengan median,13
+isi nan kolom urutan 1 pakai rata-rata,13
+isi kolom index 0 yang kosong pakai nilai tengah,13
+isi data kosong kolom index 11 dengan mean,13
+isi data kosong kolom index 12 dengan median,13
+isi data kosong kolom index 13 dengan rata-rata,13
+isi data kosong kolom index 14 dengan nilai tengah,13
+isi data kosong kolom index 15 dengan mean,13
+isi data kosong kolom index 16 dengan median,13
+isi data kosong kolom index 17 dengan rata-rata,13
+isi data kosong kolom index 18 dengan nilai tengah,13
+isi data kosong kolom index 19 dengan mean,13
+isi data kosong kolom index 20 dengan median,13
+isilah nan kolom 0 dengan mean,13
+isilah nan kolom 1 dengan median,13
+isilah nan kolom 2 dengan rata-rata,13
+isilah nan kolom 3 dengan nilai tengah,13
+isilah nan kolom 4 dengan mean,13
+isilah nan kolom 5 dengan median,13
+isi data yang tidak ada di kolom index 0 dengan mean,13
+isi baris kosong kolom 1 pakai median,13
+isi kolom index 2 yang tidak ada isinya dengan rata-rata,13
+isi data null di kolom 0 pakai nilai tengah,13
+isi data nan kolom 3 dengan mean,13
+gunakan rata-rata untuk isi nan kolom 0,13
+gunakan median untuk isi nan kolom 1,13
+gunakan mean untuk isi nan kolom 2,13
+gunakan nilai tengah untuk isi nan kolom 3,13
+gunakan rata-rata untuk isi nan kolom 4,13
+gunakan median untuk isi nan kolom 5,13
+gunakan mean untuk isi nan kolom 6,13
+gunakan nilai tengah untuk isi nan kolom 7,13
+gunakan rata-rata untuk isi nan kolom 8,13
+gunakan median untuk isi nan kolom 9,13
+gunakan mean untuk isi nan kolom 10,13
+pakai mean untuk kolom index 0 yang kosong,13
+pakai median untuk kolom index 1 yang kosong,13
+pakai rata-rata untuk kolom index 2 yang kosong,13
+pakai nilai tengah untuk kolom index 3 yang kosong,13
+pakai mean untuk kolom index 4 yang kosong,13
+pakai median untuk kolom index 5 yang kosong,13
+isi data kosong kolom 0 pakai angka rata-rata,13
+isi data kosong kolom 1 pakai angka median,13
+isi data kosong kolom 2 pakai angka rata-rata,13
+isi data kosong kolom 3 pakai angka median,13
+isi data kosong kolom index 0 dengan nilai rata-rata,13
+isi data kosong kolom index 1 dengan nilai tengah,13
+isi data kosong kolom index 2 dengan nilai rata-rata,13
+isi data kosong kolom index 3 dengan nilai tengah,13
+isi data kosong kolom index 4 dengan nilai rata-rata,13
+isi data kosong kolom index 5 dengan nilai tengah,13
+isi data kosong kolom index 6 dengan nilai rata-rata,13
+isi data kosong kolom index 7 dengan nilai tengah,13
+isi data kosong kolom index 8 dengan nilai rata-rata,13
+isi data kosong kolom index 9 dengan nilai tengah,13
+isi data kosong kolom index 10 dengan nilai rata-rata,13
+imputasi kolom 0 dengan mean,13
+imputasi kolom 1 dengan median,13
+imputasi kolom 2 dengan rata-rata,13
+imputasi kolom 3 dengan nilai tengah,13
+imputasi kolom 4 dengan mean,13
+imputasi kolom 5 dengan median,13
+isi kolom ke 0 yang nan pakai mean,13
+isi kolom ke 1 yang nan pakai median,13
+isi kolom ke 2 yang nan pakai rata-rata,13
+isi kolom ke 3 yang nan pakai nilai tengah,13
+isi kolom ke 4 yang nan pakai mean,13
+hapus baris index ke 0,14
+tolong hapus baris 1,14
+buang baris dengan index 0,14
+hilangkan baris index 2,14
+hapus baris ke 0,14
+delete baris index 3,14
+hapus baris nomor 0,14
+buang data baris index 1,14
+hapus isi baris 0,14
+hilangkan hanya baris index 4,14
+hapus baris dengan urutan 0,14
+delete data di baris index 0,14
+hapus baris index ke 5,14
+buang baris nomor 2,14
+hapus baris 0 saja,14
+hilangkan baris index 1 sekarang,14
+hapus data baris 0,14
+hapus baris index pertama,14
+hapus baris index kedua,14
+buang baris dengan index 1,14
+hapus baris 0 dari dataset,14
+hapus baris index 10,14
+hapus baris urutan ke 0,14
+pilih dan hapus baris index 0,14
+buangkan baris nomor 1,14
+hilangkan baris dengan posisi 0,14
+ambil dan hapus baris index 0,14
+hapus baris ke-0,14
+hapus baris index 6,14
+hapus baris 2,14
+hapus baris 3,14
+hapus baris 4,14
+hapus baris 5,14
+hapus baris 10,14
+buang baris 0,14
+buang baris 1,14
+buang baris 5,14
+hilangkan baris 0,14
+hilangkan baris 1,14
+hilangkan baris 2,14
+delete baris 0,14
+delete baris 3,14
+hapus data baris index 0,14
+hapus data baris index 1,14
+hapus data baris index 2,14
+hapus data baris index 3,14
+hapus data baris index 4,14
+hapus data baris index 5,14
+hapus data baris index 6,14
+hapus data baris index 7,14
+hapus data baris index 8,14
+hapus data baris index 9,14
+hapus baris urutan 1,14
+hapus baris urutan 2,14
+hapus baris urutan 3,14
+hapus baris urutan 4,14
+hapus baris urutan 5,14
+hapus baris urutan 0 saja,14
+hapus baris urutan 1 saja,14
+hapus baris urutan 2 saja,14
+hapus baris urutan 3 saja,14
+hapus baris urutan 4 saja,14
+hapus baris urutan 5 saja,14
+hapus baris urutan 6 saja,14
+hapus baris urutan 7 saja,14
+hapus baris urutan 8 saja,14
+hapus baris urutan 9 saja,14
+hapus baris urutan 10 saja,14
+hapus baris index 0 dataset,14
+hapus baris index 1 dataset,14
+hapus baris index 2 dataset,14
+hapus baris index 3 dataset,14
+hapus baris index 4 dataset,14
+hapus baris index 5 dataset,14
+hapus baris index 6 dataset,14
+hapus baris index 7 dataset,14
+hapus baris index 8 dataset,14
+hapus baris index 9 dataset,14
+hapus baris index 10 dataset,14
+hapus baris index 11 dataset,14
+hapus baris index 12 dataset,14
+hapus baris index 13 dataset,14
+hapus baris index 14 dataset,14
+hapus baris index 15 dataset,14
+hapus baris index 16 dataset,14
+hapus baris index 17 dataset,14
+hapus baris index 18 dataset,14
+hapus baris index 19 dataset,14
+hapus baris index 20 dataset,14
+buang baris index 0 saja,14
+buang baris index 1 saja,14
+buang baris index 2 saja,14
+buang baris index 3 saja,14
+buang baris index 4 saja,14
+buang baris index 5 saja,14
+buang baris index 6 saja,14
+buang baris index 7 saja,14
+buang baris index 8 saja,14
+buang baris index 9 saja,14
+buang baris index 10 saja,14

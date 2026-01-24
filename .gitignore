@@ -4,3 +4,4 @@ testing/
 report.txt
 exp.ipynb
 ftransform.joblib
+.vscode
